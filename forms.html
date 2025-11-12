@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -46,8 +46,8 @@
                 font-size: 14px;
             }
 
-            input[type="radio"]
-            input[type=":checkbox"] {
+            input[type="radio"],
+            input[type="checkbox"] {
                 margin-right: 5px;
             }
 
@@ -87,19 +87,19 @@
 </head>
 <body>
     <div class="form-container">
-    <h1>Student Registration Form</h1>
-    <form action="/submit" method="POST">
+        <h1>Student Registration Form</h1>
+        <form action="/submit" method="POST">
         <!-- Text Input for Name -->
          <label for="fullName">Full Name<span class="required">*</span></label>
          <input type="text" id="fullName" name="fullName" required>
 
          <!-- Email Input -->
           <label for="email">Email Address<span class="required">*</span></label>
-          <input type="email">
+           <input type="email" id="email" name="email" required>
 
           <!-- Phone Input-->
 
-        <label for="phone">Phone Humber</label>
+        <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
 
         <label for="birthdate">Date of Birth<span class="required">*</span></label>
@@ -107,14 +107,14 @@
 
         <label>Grade Level<span class="required">*</span></label>
         <div class="radio-group">
-            <input type="radio" id="grade9" name="Grade" value="9" required>
-            <label for="grade9">9th Grade</label>
-            <input type="radio" id="grade10" name="Grade" value="10" required>
-            <label for="grade9">10th Grade</label>
-            <input type="radio" id="grade11" name="Grade" value="11" required>
-            <label for="grade9">11th Grade</label>
-            <input type="radio" id="grade12" name="Grade" value="12" required>
-            <label for="grade9">12th Grade</label>
+                <input type="radio" id="grade9" name="grade" value="9" required>
+                <label for="grade9">9th Grade</label>
+                <input type="radio" id="grade10" name="grade" value="10" required>
+                <label for="grade10">10th Grade</label>
+                <input type="radio" id="grade11" name="grade" value="11" required>
+                <label for="grade11">11th Grade</label>
+                <input type="radio" id="grade12" name="grade" value="12" required>
+                <label for="grade12">12th Grade</label>
         </div>
 
             <label for="favoriteSubject">Favorite Subject<span class="required">*</span></label>
@@ -126,34 +126,34 @@
                 <option value="history">History</option>
                 <option value="computerScience">Computer Science</option>
                 <option value="art">Art</option>
-
-                <select id="extracurricularActivities" name="extracurricularActivities"></select>
-                <label>Extracurricular Activities (Select all that apply)</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="sports" name="activities" value="sports">
-                    <label for="sports">Sports</label>
-                    
-                    <input type="checkbox" id="music" name="music" value="music">
-                    <label for="music">Music Club</label>
-
-                    <input type="checkbox" id="drama" name="drama" value="drama">
-                    <label for="drama">Drama Club</label>
-
-                    <input type="checkbox" id="coding" name="activities" value="coding">
-                    <label for="coding">Coding Club</label>
-
-                    <input type="checkbox" id="robotics" name="activities" value="robotics">
-                    <label for="robotics">Robotics Club</label>
-                </div>
-
-                    <label for="comments">Why are you interested in Computer Science?</label>
-                    <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
-
-                    <!-- Submit Button -->
-                     <button type="submit">Submit Registration</button>
-                     <input type="button" value="Reset">
-
-                </div>
             </select>
+
+            <label>Extracurricular Activities (Select all that apply)</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sports" name="activities" value="sports">
+                <label for="sports">Sports</label>
+
+                <input type="checkbox" id="music" name="activities" value="music">
+                <label for="music">Music Club</label>
+
+                <input type="checkbox" id="drama" name="activities" value="drama">
+                <label for="drama">Drama</label>
+
+                <input type="checkbox" id="coding" name="activities" value="coding">
+                <label for="coding">Coding</label>
+
+                <input type="checkbox" id="robotics" name="activities" value="robotics">
+                <label for="robotics">Robotics</label>
+            </div>
+
+            <label for="comments">Why are you interested in Computer Science?</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Registration</button>
+            <input type="reset" value="Reset">
+
+        </form>
+    </div>
     </body>
 </html>
